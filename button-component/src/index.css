@@ -1,0 +1,193 @@
+/* Importing Noto Sans JP from Google Fonts with font weight 500*/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:500');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+:root {
+    --default: rgb(224, 224, 224);
+    --primary: rgb(41, 98, 255);
+    --secondary: rgb(69, 90, 100);
+    --danger: #D32F2F;
+    --default-f: #AEAEAE;
+    --primary-f: #0039CB;
+    --secondary-f: #1C313A;
+    --danger-f: #9A0007;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    gap: 1rem;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.25em;
+    all: unset;
+    border: none;
+    box-shadow: 0px 2px 3px 0px #333333;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
+    font-weight: 500;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.material-symbols-outlined{
+    font-family: 'Material Symbols Outlined', sans-serif;
+    font-size: 1em;
+    display: inline-block;
+}
+
+.default {
+    background: var(--default);
+    color: #3F3F3F;
+}
+
+.primary {
+    background: var(--primary);
+    color: #FFFFFF;
+}
+
+.secondary {
+    background: var(--secondary);
+    color: #FFFFFF;
+}
+
+.danger {
+    background: var(--danger);
+    color: #FFFFFF;
+}
+
+.primary:hover,
+.primary:focus {
+    background: var(--primary-f);
+}
+
+.secondary:hover,
+.secondary:focus {
+    background: var(--secondary-f);
+}
+
+.danger:hover,
+.danger:focus {
+    background: var(--danger-f);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.default:focus,
+.default:hover {
+    outline: none;
+    background: var(--default-f);
+}
+
+.outline {
+    background: #fff;
+    box-shadow: none;
+}
+
+.outline.default {
+    background: var(--default);
+    color: #3F3F3F;
+}
+
+.outline.primary {
+    border: 2px solid var(--primary);
+    color: var(--primary);
+}
+
+.outline.secondary {
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.outline.danger {
+    border: 2px solid var(--danger);
+    color: var(--danger);
+}
+
+.outline:focus,
+.outline:hover {
+    background: rgba(41, 98, 255, 0.1);
+}
+
+.text{
+    background: #fff;
+    box-shadow: none;
+}
+
+.text.default {
+    background: var(--default);
+    color: #3F3F3F;
+}
+
+.text.primary {
+    color: var(--primary);
+}
+
+.text.secondary {
+    color: var(--secondary);
+}
+
+.text.danger {
+    color: var(--danger);
+}
+
+.text:focus,
+.text:hover {
+    background: rgba(41, 98, 255, 0.1);
+}
+
+.disableShadow {
+    box-shadow: none;
+}
+
+.disabled {
+    cursor: default;
+    box-shadow: none;
+    pointer-events: none;
+}
+
+.disabled:focus,
+.disabled:hover {
+    cursor: default;
+    box-shadow: none;
+}
+
+.sm {
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+}
+
+.md {
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+}
+
+.lg {
+    padding: 1em 2em;
+    border-radius: 0.75em;
+}
