@@ -1,21 +1,11 @@
-import Button from "./components/Button";
-
+import Buttons from "./pages/Buttons";
+import {Routes, Route} from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Button>Default</Button>
-      <Button variant="outline">Default</Button>
-      <Button variant="text">Default</Button>
-      <Button color="primary" disableShadow>Default</Button>
-      <Button disabled>Default</Button>
-      <Button variant="text" disabled>Default</Button>
-      <Button size="sm">Default</Button>
-      <Button size="md">Default</Button>
-      <Button size="lg">Default</Button>
-      <Button color="primary">Default</Button>
-      <Button color="secondary">Default</Button>
-      <Button color="danger">Default</Button>
-      <Button startIcon="menu" endIcon="check">Default</Button>
+        <Routes>
+          <Route path="/buttons" element={<Buttons />} />
+        </Routes>
     </div>
   );
 }

@@ -2,13 +2,13 @@ import React from 'react'
 
 const Button = ({ children, variant, disableShadow, disabled, size, color, startIcon, endIcon }) => {
     return (
-        <button className={`${variant} ${disableShadow == true ? "disableShadow" : ""} ${disabled == true ? "disabled" : ""} ${size} ${color}`} disabled={disabled}>
-            {startIcon && (<div class="material-symbols-outlined">
+        <button className={`${variant}${disableShadow === true ? " disableShadow" : " "}${disabled === true ? " disabled" : ""} ${size} ${color}`} disabled={disabled}>
+            {startIcon && (<div className="material-symbols-outlined">
                 {startIcon}
             </div>)}
             {children}
 
-            {endIcon && (<div class="material-symbols-outlined">
+            {endIcon && (<div className="material-symbols-outlined">
                 {endIcon}
             </div>)}
         </button>
@@ -19,7 +19,8 @@ const Button = ({ children, variant, disableShadow, disabled, size, color, start
 Button.defaultProps = {
     color: 'default',
     variant: "",
-    size: "md"
+    size: "md",
+    children: "Default",
 }
 
 export default Button
