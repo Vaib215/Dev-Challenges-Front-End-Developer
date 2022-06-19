@@ -1,6 +1,6 @@
 /* Importing Noto Sans JP from Google Fonts with font weight 500*/
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:500');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0");
 :root {
     --default: rgb(224, 224, 224);
     --primary: rgb(41, 98, 255);
@@ -40,7 +40,26 @@ body {
     height: 100%;
 }
 
-.button_page{
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav{
+    display: flex;
+    gap: 2em;
+    margin: 0 0 2em;
+}
+
+.nav>*{
+    font-weight: normal;
+}
+
+.nav>*:active{
+    font-weight: bold;
+}
+
+.button_page,.input_page {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -52,12 +71,17 @@ h1{
     font-weight: normal;
 }
 
-.buttons {
+.buttons,.inputs {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
     grid-template-rows: repeat(4, 1fr);
     grid-gap: 1rem 4rem;
     width: 100%;
+}
+
+.fw{
+    grid-column: 1 / -1;
+    margin-right: 8em;
 }
 
 .row {
@@ -66,159 +90,4 @@ h1{
     gap: 1em;
 }
 
-button {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    gap: 0.5em;
-    all: unset;
-    border: none;
-    box-shadow: 0px 2px 3px 0px #969696;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-weight: 500;
-    font-size: 1em;
-    cursor: pointer;
-    width: fit-content;
-    transition: all 0.150s ease-in-out;
-}
 
-.material-symbols-outlined{
-    font-family: 'Material Symbols Outlined', sans-serif;
-    font-size: 1em;
-    display: inline-block;
-}
-
-.default {
-    background: var(--default);
-    color: #3F3F3F;
-}
-
-.primary {
-    background: var(--primary);
-    color: #FFFFFF;
-}
-
-.secondary {
-    background: var(--secondary);
-    color: #FFFFFF;
-}
-
-.danger {
-    background: var(--danger);
-    color: #FFFFFF;
-}
-
-.primary:hover,
-.primary:focus {
-    background: var(--primary-f);
-}
-
-.secondary:hover,
-.secondary:focus {
-    background: var(--secondary-f);
-}
-
-.danger:hover,
-.danger:focus {
-    background: var(--danger-f);
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-.default:focus,
-.default:hover {
-    outline: none;
-    background: var(--default-f);
-}
-
-.outline {
-    background: #fff;
-    box-shadow: none;
-}
-
-.outline.default {
-    border: 2px solid var(--default);
-    color: #3F3F3F;
-}
-
-.outline.primary {
-    border: 2px solid var(--primary);
-    color: var(--primary);
-}
-
-.outline.secondary {
-    border: 2px solid var(--secondary);
-    color: var(--secondary);
-}
-
-.outline.danger {
-    border: 2px solid var(--danger);
-    color: var(--danger);
-}
-
-.outline:focus,
-.outline:hover {
-    background: rgba(41, 98, 255, 0.1);
-}
-
-.text{
-    background: #fff;
-    box-shadow: none;
-}
-
-.text.default {
-    color: #3F3F3F;
-}
-
-.text.primary {
-    color: var(--primary);
-}
-
-.text.secondary {
-    color: var(--secondary);
-}
-
-.text.danger {
-    color: var(--danger);
-}
-
-.text:focus,
-.text:hover {
-    background: rgba(41, 98, 255, 0.1);
-}
-
-.disableShadow {
-    box-shadow: none;
-}
-
-.disabled {
-    cursor: default;
-    box-shadow: none;
-    pointer-events: none;
-}
-
-.disabled:focus,
-.disabled:hover {
-    cursor: default;
-    box-shadow: none;
-}
-
-.sm {
-    padding: 0.25em 0.5em;
-    border-radius: 0.35em;
-}
-
-.md {
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
-}
-
-.lg {
-    padding: 1em 2em;
-    border-radius: 0.75em;
-}
